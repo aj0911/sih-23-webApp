@@ -1,9 +1,10 @@
 import React from 'react'
 import './Home.css'
-import Header from '../Extra/Header'
 import Footer from '../Extra/Footer'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
       <div className="home">
         <div className="hero">
@@ -11,7 +12,7 @@ const Home = () => {
             <div className="btns">
               <h3>Pricing</h3>
               <h3>About</h3>
-              <button>Sign In</button>
+              <button onClick={()=>navigate('/Login')}>Sign In</button>
             </div>
           </div>
           <div className="down">

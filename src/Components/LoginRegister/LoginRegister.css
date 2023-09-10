@@ -1,0 +1,143 @@
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px 5%;
+    background-color: var(--bgAuthColor);
+}
+
+.wrapper >h3{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--textColorlight);
+    cursor: pointer;
+}
+
+.wrapper form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 20px;
+    width: 40%;
+}
+
+.wrapper form .formControl{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    gap: .5rem;
+}
+.wrapper form .formControl .label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+}
+.wrapper form .formControl .label img{
+    width: 20px;
+    height: 20px;
+}
+.wrapper form .formControl .label h3{
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--textColorDark);
+}
+
+.wrapper form .formControl input{
+    width: 100%;
+    border: none;
+    background-color: var(--navColor);
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: var(--transition);
+    color: var(--textColorDark);
+}
+.wrapper form .formControl input:focus{
+    outline-width: 0;
+}
+
+.wrapper form .btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.wrapper form .btns h3 {
+    width: 60%;
+    font-size:1rem;
+    font-weight: 400;
+    color: var(--textColorlight);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.wrapper form .btns h3:hover{
+    transform: scale(1.05);
+    color: var(--gradientColor1);
+}
+
+.wrapper form .btns input {
+    border: none;
+    background-color: var(--mainColor);
+    padding: 10px 20px;
+    color: var(--textColor);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40%;
+    transition: var(--transition);
+}
+.wrapper form input:hover{
+    transform: scale(1.05);
+}
+
+.wrapper form button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 20px;
+    color: var(--mainColor);
+    background-color: transparent;
+    border: 2px solid var(--mainColor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.wrapper form button:hover{
+    color: var(--textColor);
+    background-color: var(--mainColor);
+}
+
+/* for tablets */
+@media screen and (max-width:999px) {
+    .wrapper form{
+        width: 70%;
+    }
+}
+
+/* for mobile */
+@media screen and (max-width:599px) {
+    .wrapper form{
+        width: 100%;
+    }
+    .wrapper form .btns h3 {
+        font-size: .9rem;
+    }
+    .wrapper form button{
+        font-size: .9rem;
+        padding: 15px 10px;
+    }
+}

@@ -26,7 +26,9 @@ html{
     --gradientColor1:#FF1FA2;
     --gradientColor2:#FFC0FF;
     --bgColor:#FA8080;
+    --bgAuthColor:#F7FAFC;
     --textColorPink:#F9DDDD;
+    --navColor:#EDF2F7;
     --transition:.4s all;
 }
 

@@ -13,6 +13,7 @@ header .logo{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 }
 header .logo img{
     width: 50px;
