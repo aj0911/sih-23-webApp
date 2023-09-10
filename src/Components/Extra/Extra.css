@@ -1,0 +1,143 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    position: fixed;
+    padding: 10px 5%;
+    background-color: var(--mainColor);
+}
+
+header .logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header .logo img{
+    width: 50px;
+    height: 50px;
+    animation: loader 3s linear infinite;
+}
+
+header .logo h3{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--textColor);
+    text-transform: capitalize;
+}
+
+header .btns{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .btns button{
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: 2px solid var(--textColor);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--textColor);
+    cursor: pointer;
+    transition: var(--transition);
+}
+header .btns button.pro{
+    border: none;
+    background-color: var(--gradientColor1);
+}
+header .btns button.pro:hover{
+    color: var(--gradientColor1);
+}
+header .btns button:hover{
+    background-color: var(--textColor);
+    color: var(--mainColor);
+    transform: scale(1.05);
+    box-shadow: 2px 2px 20px rgba(255,255, 255, 0.2);
+}
+
+header .btns img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--mainColor);
+    padding:20px 5%;
+    flex-wrap: wrap;
+    width: 100%;
+}
+footer h3{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--textColor);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+footer h3:hover{
+    color: var(--gradientColor1);
+}
+
+footer .logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+footer .logo img{
+    width: 50px;
+    height: 50px;
+    animation: loader 3s linear infinite;
+}
+
+footer .logo h3{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--textColor);
+    text-transform: capitalize;
+}
+
+
+/* for tablets */
+@media screen and (max-width:999px){
+
+}
+
+/* for mobile */
+@media screen and (max-width:599px) {
+    header .logo h3 {
+        font-size: 1.2rem;
+    }
+    header .btns button {
+        font-size: .8rem;
+    }
+    footer {
+        gap: .5rem;
+    }
+    footer h3 {
+        font-size: .8rem;
+    }
+    footer .logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo img{
+        width: 40px;
+        height: 40px;
+    }
+    footer .logo h3 {
+        font-size: 1rem;
+    }
+}
+
+

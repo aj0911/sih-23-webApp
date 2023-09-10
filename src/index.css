@@ -19,13 +19,32 @@ html{
 }
 
 :root{
-    --transition:.4s all,
-    --mainColor:#211858,
-    --textColor:#FFFCFE,
-    --textColordark:#2A4365,
-    --textColorlight:#2492E3,
-    --gradientColor1:#FF1FA2,
-    --gradientColor2:#FFC0FF,
-    --bgColor:#FA8080,
-    --textColorPink:#F9DDDD
+    --mainColor: #211858;
+    --textColor:#FFFCFE;
+    --textColordark:#2A4365;
+    --textColorlight:#2492E3;
+    --gradientColor1:#FF1FA2;
+    --gradientColor2:#FFC0FF;
+    --bgColor:#FA8080;
+    --textColorPink:#F9DDDD;
+    --transition:.4s all;
+}
+
+/* for tablets */
+@media screen and (max-width:999px) {
+    
+}
+
+/* for mobile */
+@media screen and (max-width:599px) {
+
+}
+
+@keyframes loader {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
