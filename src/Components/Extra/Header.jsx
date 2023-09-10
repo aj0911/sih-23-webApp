@@ -2,7 +2,7 @@ import React from 'react'
 import './Extra.css'
 import { useNavigate } from 'react-router-dom'
 
-const Header = ({isLoggedIn=false}) => {
+const Header = ({isLoggedIn=false,photoClick}) => {
     const navigate = useNavigate();
   return (
     <header>
@@ -15,7 +15,7 @@ const Header = ({isLoggedIn=false}) => {
                 (isLoggedIn)?
                 <>
                     <button className='pro'>Pro plan</button>
-                    <img src={require('../../Assets/Images/avatar.png')} alt="" />
+                    <img src={require('../../Assets/Images/avatar.png')} alt="" onClick={photoClick} />
                 </>:
                 <button onClick={()=>navigate('/Login')}>Sign In</button>
             }

@@ -1,0 +1,114 @@
+.raiseSolution{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+}
+.rowContent{
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem;
+    align-items: center;
+}
+.colContent{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+}
+.raiseSolution thead{
+    width: 100%;
+}
+
+.raiseSolution thead td{
+    font-size:.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--textColordark);
+    border-bottom: 1px solid var(--navColor);
+    padding-bottom: 10px;
+}
+.raiseSolution thead td button{
+    padding: 5px 10px;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    border-radius: 5px;
+}
+.raiseSolution thead td button img{
+    width: 20px;
+    height: 20px;
+}
+
+.raiseSolution thead td button h3{
+    font-size:.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.raiseSolution tbody tr td{
+    background-color: var(--navColor);
+    padding: 10px;
+    font-size:.9rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--textColordark);
+}
+.raiseSolution tbody tr td:first-child{
+    width: 25%;
+    border-radius: 5px 0 0 5px;
+}
+.raiseSolution tbody tr td .colContent p{
+    font-size:.9rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--textColordark);
+    text-align: start;
+}
+
+.raiseSolution tbody tr td .colContent h5{
+    font-size:.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--textColordark);
+}
+
+.raiseSolution tbody tr td button{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: .8rem;
+    color: var(--textColor);
+    cursor: pointer;
+}
+
+.raiseSolution tbody tr td .rowContent p{
+    font-size:.9rem;
+    font-weight: 600;
+    background-color: var(--mainColor);
+    border-radius: 30px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    color: var(--textColor);
+}
+
+.raiseSolution tbody tr td .rowContent h3{
+    font-size:.9rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--textColordark);
+}
+.raiseSolution tbody tr td:last-child{
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+}
+
+/* for tablets */
+@media screen and (max-width:999px) {
+    .raiseSolution tbody tr td .rowContent{
+        flex-direction: column;
+    }
+}
+
+/* for mobile */
+@media screen and (max-width:599px) {
+
+}

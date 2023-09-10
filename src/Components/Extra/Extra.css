@@ -118,7 +118,10 @@ footer .logo h3{
         font-size: 1.2rem;
     }
     header .btns button {
-        font-size: .8rem;
+        font-size: .7rem;
+    }
+    header .btns button.pro {
+        padding: 5px;
     }
     footer {
         gap: .5rem;
@@ -138,6 +141,10 @@ footer .logo h3{
     }
     footer .logo h3 {
         font-size: 1rem;
+    }
+    header .btns img {
+        width: 30px;
+        height: 30px;
     }
 }
 

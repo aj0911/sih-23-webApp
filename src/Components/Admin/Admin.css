@@ -1,0 +1,118 @@
+.admin{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.admin .left{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--navColor);
+    width: 20%;
+    padding: 100px 5px 20px 30px;
+    height: 100vh;
+}
+.admin .left .nav{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+.admin .left .nav > h3{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--textColorlight);
+}
+
+.admin .left .nav .menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.admin .left .nav .menu img{
+    width: 20px;
+    height: 20px;
+}
+.admin .left .nav .menu h4{
+    font-size: .9rem;
+    font-weight: 400;
+    transition: all .2s;
+    color:var(--textColordark);
+}
+.admin .left .nav .menu .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: all .2s;
+    margin-left: -.8rem;
+}
+.admin .right{
+    width: 80%;
+    height: 100vh;
+    padding: 80px 20px 20px 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.admin .left .nav .menu:hover .dot,.admin .left .nav .menu.active .dot{
+    background-color: var(--dotColor);
+}
+.admin .left .nav .menu:hover h4,.admin .left .nav .menu.active h4{
+    font-weight: 700;
+}
+
+
+/* for tablets */
+@media screen and (max-width:999px) {
+    .admin .left{
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 50%;
+        height: 100vh;
+        transition: left .4s;
+        overflow: scroll;
+    }
+    .admin .left.active{
+        left: 0;
+    }
+    .admin .left .nav > h3 {
+        font-size: 1.5rem;
+    }
+    .admin .left .nav .menu img {
+        width: 30px;
+        height: 30px;
+    }
+    .admin .left .nav .menu h4 {
+        font-size: 1.2rem;
+    }
+    .admin .right{
+        width: 100%;
+    }
+}
+
+/* for mobile */
+@media screen and (max-width:599px) {
+    .admin .left{
+        width: 70%;
+        left: -70%;
+    }
+    .admin .left .nav > h3 {
+        font-size: .9rem;
+    }
+    .admin .left .nav .menu img {
+        width: 10px;
+        height: 10px;
+    }
+    .admin .left .nav .menu h4 {
+        font-size: .8rem;
+    }
+}

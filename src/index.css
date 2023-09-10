@@ -30,6 +30,8 @@ html{
     --textColorPink:#F9DDDD;
     --navColor:#EDF2F7;
     --transition:.4s all;
+    --dotColor:#D53F8C;
+    --notresolveColor:#FC8181;
 }
 
 /* for tablets */
