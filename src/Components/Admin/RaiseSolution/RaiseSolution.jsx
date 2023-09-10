@@ -65,47 +65,54 @@ const RaiseSolution = () => {
         },
     ]
   return (
-    <table className='raiseSolution'>
-        <thead>
-            <td>Grievance File</td>
-            <td>Created</td>
-            <td>Status</td>
-            <td>Employee</td>
-            <td>
-                <button>
-                    <div className="rowContent">
-                        <img src={require('../../../Assets/Images/file-plus-white.png')} alt="" />
-                        <h3>Add New</h3>
-                    </div>
-                </button>
-            </td>
-        </thead>
-        <tbody>
-            {
-                data.map((e,i)=>(
-                    <tr key={i}>
-                        <td>
-                            <div className="colContent">
-                                <p>{e.gfile.title}</p>
-                                <h5>Jurisdiction: {e.gfile.jurisdiction}</h5>
-                            </div>
-                        </td>
-                        <td>{e.created}</td>
-                        <td><button style={{background:(e.status)?'var(--textColorlight)':'var(--notresolveColor)'}}>{(e.status)?'Resolved':'Not Resolved'}</button></td>
-                        <td>
-                            <div className="rowContent">
-                                <h3>{e.emp.name}</h3>
-                                <p>{e.emp.des}</p>
-                            </div>
-                        </td>
-                        <td>
-                            <img src={require('../../../Assets/Images/more-horizontal.png')} alt="" />
-                        </td>
-                    </tr>
-                ))
-            }
-        </tbody>
-    </table>
+    <>
+        <table className='raiseSolution'>
+            <thead>
+                <td>Grievance File</td>
+                <td>Created</td>
+                <td>Status</td>
+                <td>Employee</td>
+                <td>
+                    <button>
+                        <div className="rowContent">
+                            <img src={require('../../../Assets/Images/file-plus-white.png')} alt="" />
+                            <h3>Add New</h3>
+                        </div>
+                    </button>
+                </td>
+            </thead>
+            <tbody>
+                {
+                    data.map((e,i)=>(
+                        <tr key={i}>
+                            <td data-attr='Grievance File: '>
+                                <div className="colContent">
+                                    <p>{e.gfile.title}</p>
+                                    <h5>Jurisdiction: {e.gfile.jurisdiction}</h5>
+                                </div>
+                            </td>
+                            <td data-attr='Created: '>{e.created}</td>
+                            <td data-attr='Status: '><button style={{background:(e.status)?'var(--textColorlight)':'var(--notresolveColor)'}}>{(e.status)?'Resolved':'Not Resolved'}</button></td>
+                            <td data-attr='Employee: '>
+                                <div className="rowContent">
+                                    <h3>{e.emp.name}</h3>
+                                    <p>{e.emp.des}</p>
+                                </div>
+                            </td>
+                            <td>
+                                <img src={require('../../../Assets/Images/more-horizontal.png')} alt="" />
+                            </td>
+                        </tr>
+                    ))
+                }
+            </tbody>
+        </table>
+        <div className="pagination">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+        </div>
+    </>
   )
 }
 
