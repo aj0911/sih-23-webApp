@@ -1,4 +1,4 @@
-.raiseSolution{
+.statusReport{
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 1rem;
@@ -16,11 +16,11 @@
     flex-direction: column;
     gap: .2rem;
 }
-.raiseSolution thead{
+.statusReport thead{
     width: 100%;
 }
 
-.raiseSolution thead td{
+.statusReport thead td{
     font-size:.9rem;
     font-weight: 500;
     text-transform: capitalize;
@@ -28,38 +28,37 @@
     border-bottom: 1px solid var(--navColor);
     padding-bottom: 10px;
 }
-.raiseSolution thead td button{
+.statusReport thead td button{
     padding: 5px 10px;
     background-color: var(--mainColor);
     color: var(--textColor);
     border-radius: 5px;
 }
-.raiseSolution thead td button img{
+.statusReport thead td button img{
     width: 20px;
     height: 20px;
 }
 
-.raiseSolution thead td button h3{
+.statusReport thead td button h3{
     font-size:.9rem;
     font-weight: 500;
     text-transform: capitalize;
 }
-.raiseSolution tbody tr{
+.statusReport tbody tr{
     background-color: var(--navColor);
 
 }
-.raiseSolution tbody tr td{
-    padding: 10px;
+.statusReport tbody tr td{
+    padding: 20px;
     font-size:.9rem;
     font-weight: 400;
     text-transform: capitalize;
     color: var(--textColordark);
 }
-.raiseSolution tbody tr td:first-child{
-    width: 25%;
+.statusReport tbody tr td:first-child{
     border-radius: 5px 0 0 5px;
 }
-.raiseSolution tbody tr td .colContent p{
+.statusReport tbody tr td .colContent p{
     font-size:.9rem;
     font-weight: 700;
     text-transform: capitalize;
@@ -67,7 +66,7 @@
     text-align: start;
 }
 
-.raiseSolution tbody tr td .colContent h5{
+.statusReport tbody tr td .colContent h5{
     font-size:.8rem;
     font-weight: 400;
     text-transform: capitalize;
@@ -75,8 +74,8 @@
     text-align: start;
 }
 
-.raiseSolution tbody tr td select{
-    border: none;
+.statusReport tbody tr td select{
+    border: 2px solid;
     padding: 5px 10px;
     border-radius: 30px;
     font-size: .8rem;
@@ -88,10 +87,10 @@
     text-overflow: '';
     text-align: center;
 }
-.raiseSolution tbody tr td select:focus{
+.statusReport tbody tr td select:focus{
     outline-width: 0;
 }
-.raiseSolution tbody tr td .rowContent p{
+.statusReport tbody tr td .rowContent p{
     font-size:.9rem;
     font-weight: 600;
     background-color: var(--mainColor);
@@ -100,14 +99,34 @@
     text-transform: capitalize;
     color: var(--textColor);
 }
-
-.raiseSolution tbody tr td .rowContent h3{
+.statusReport tbody tr td .type{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 2px solid var(--notresolveColor);
+    color: var(--notresolveColor);
+    padding: 10px;
+    width: 50%;
+}
+.statusReport tbody tr td .type h5{
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.statusReport tbody tr td .type p{
+    font-size: .6rem;
+    font-weight: 400;
+    width: 100%;
+}
+.statusReport tbody tr td .rowContent h3{
     font-size:.9rem;
     font-weight: 400;
     text-transform: capitalize;
     color: var(--textColordark);
 }
-.raiseSolution tbody tr td:last-child{
+.statusReport tbody tr td:last-child{
     text-align: center;
     border-radius: 0 5px 5px 0;
 }
@@ -140,26 +159,36 @@
 
 /* for tablets */
 @media screen and (max-width:999px) {
-    .raiseSolution tbody tr td .rowContent{
+    .statusReport tbody tr td .rowContent{
         flex-direction: column;
     }
-    .raiseSolution td{
+    .statusReport td{
         text-align: center;
+    }
+    .statusReport tbody tr td .type {
+        width: 100%;
+        text-align: start;
     }
 }
 
 /* for mobile */
 @media screen and (max-width:599px) {
+    .statusReport tbody tr td .type h5 {
+        font-size: .8rem;
+    }
+    .statusReport tbody tr td .type p {
+        font-size: .5rem;
+    }
     .pagination button {
         width: 30px;
         height: 30px;
         font-size: .8rem;
     }
-    .raiseSolution thead{
+    .statusReport thead{
         display: none;
     }
 
-    .raiseSolution tbody tr{
+    .statusReport tbody tr{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -167,18 +196,18 @@
         padding: 10px;
         border-radius: 5px;
     }
-    .raiseSolution tbody{
+    .statusReport tbody{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1rem;
     }
-    .raiseSolution tbody tr td:first-child{
+    .statusReport tbody tr td:first-child{
         width: 60%;
         border-radius: 0;
     }
-    .raiseSolution tbody tr td{
+    .statusReport tbody tr td{
         width: 100%;
         border-bottom: 1px solid #b5b5b5;
         width: 60%;
@@ -186,27 +215,27 @@
         padding: 5px;
         position: relative;
     }
-    .raiseSolution tbody tr td .colContent p {
+    .statusReport tbody tr td .colContent p {
         font-size: .8rem;
         text-align: justify;
     }
-    .raiseSolution tbody tr td .colContent h5 {
+    .statusReport tbody tr td .colContent h5 {
         font-size: .6rem;
     }
-    .raiseSolution tbody tr td select{
+    .statusReport tbody tr td select{
         font-size: .7rem;
     }
-    .raiseSolution tbody tr td .rowContent h3 {
+    .statusReport tbody tr td .rowContent h3 {
         font-size: .7rem;
     }
-    .raiseSolution tbody tr td .rowContent p {
+    .statusReport tbody tr td .rowContent p {
         font-size: .7rem;
     }
-    .raiseSolution tbody tr td:last-child{
+    .statusReport tbody tr td:last-child{
         border-bottom: none;
     }
 
-    .raiseSolution tbody tr td::after{
+    .statusReport tbody tr td::after{
         position: absolute;
         top: 0;
         left: calc(-43% - 25px);
@@ -222,7 +251,7 @@
         text-align: start;
     }
 
-    .raiseSolution tbody tr td:last-child:after{
+    .statusReport tbody tr td:last-child:after{
         border-bottom: none;
     }
 }

@@ -32,6 +32,8 @@ html{
     --transition:.4s all;
     --dotColor:#D53F8C;
     --notresolveColor:#FC8181;
+    --inprogressColor:#F6AD55;
+    --pendingColor:#A0E7B8;
 }
 
 /* for tablets */

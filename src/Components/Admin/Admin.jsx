@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './Admin.css'
 import Header from '../Extra/Header'
 import RaiseSolution from './RaiseSolution/RaiseSolution'
+import { adminNav } from '../Extra/Constans'
+import StatusReport from './StatusReport/StatusReport'
 
 const Admin = () => {
     const navArr = [
@@ -57,7 +59,7 @@ const Admin = () => {
         },
     ]
     const [menuClick,setMenuClick] =useState(false);
-    const [link,setLink] = useState('Raise Solution');
+    const [link,setLink] = useState(adminNav.RAISE_SOLUTION);
 
   return (
     <>
@@ -85,7 +87,8 @@ const Admin = () => {
                 {
                     (()=>{
                         switch(link){
-                            case 'Raise Solution': return <RaiseSolution/>
+                            case adminNav.RAISE_SOLUTION: return <RaiseSolution/>
+                            case adminNav.STATUS_REPORT:return <StatusReport/>
                         }
                     }
                     )()
