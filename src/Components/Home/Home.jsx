@@ -24,7 +24,7 @@ const Home = () => {
               <button>Get Started Free</button>
               <p>*no card needed</p>
             </div>
-            <img src={require('../../Assets/Images/logo.png')} alt="" />
+            <img src={require('../../Assets/Images/logo-remove.png')} alt="" />
           </div>
         </div>
         <Footer/>
